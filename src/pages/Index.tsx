@@ -25,82 +25,110 @@ interface Product {
   features: string[];
 }
 
-// Mock data for demo
+// Mock data for demo - Real phones under ₹5000
 const mockProducts: Product[] = [
   {
     id: "1",
-    name: "iPhone 15 Pro Max 256GB",
-    brand: "Apple",
-    price: 1199,
-    originalPrice: 1299,
-    rating: 4.8,
-    reviewCount: 2847,
-    sales: "5K+ sold this month",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    name: "Redmi A3",
+    brand: "Xiaomi",
+    price: 4999,
+    originalPrice: 5499,
+    rating: 4.2,
+    reviewCount: 15847,
+    sales: "25K+ sold this month",
+    image: "https://cdn1.smartprix.com/rx-iCqNdpGrj-w1200-h1200/Cqndpgrj.jpg",
     category: "Smartphone",
-    features: ["A17 Pro chip", "Titanium build", "48MP camera"]
+    features: ["6.71 HD+ Display", "5000mAh Battery", "8MP Camera"]
   },
   {
     id: "2",
-    name: "MacBook Pro 14-inch M3",
-    brand: "Apple",
-    price: 1999,
-    rating: 4.9,
-    reviewCount: 1523,
-    sales: "2K+ sold this month",
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400",
-    category: "Laptop",
-    features: ["M3 chip", "14-inch display", "18hr battery"]
+    name: "POCO C65",
+    brand: "POCO",
+    price: 4799,
+    originalPrice: 5299,
+    rating: 4.3,
+    reviewCount: 12234,
+    sales: "18K+ sold this month",
+    image: "https://cdn1.smartprix.com/rx-i5mUeBiV4-w1200-h1200/5muebiV4.jpg",
+    category: "Smartphone",
+    features: ["6.74 HD+ Display", "MediaTek Helio G85", "50MP Camera"]
   },
   {
     id: "3",
-    name: "AirPods Pro 2nd Gen",
-    brand: "Apple",
-    price: 249,
-    originalPrice: 279,
-    rating: 4.7,
-    reviewCount: 8934,
-    sales: "10K+ sold this month",
-    image: "https://images.unsplash.com/photo-1501286353178-1ec881214838?w=400",
-    category: "Audio",
-    features: ["Active noise cancellation", "Spatial audio", "USB-C"]
+    name: "Realme Narzo N53",
+    brand: "Realme",
+    price: 4699,
+    originalPrice: 5199,
+    rating: 4.1,
+    reviewCount: 9876,
+    sales: "15K+ sold this month",
+    image: "https://cdn1.smartprix.com/rx-iL8RRmUf2-w1200-h1200/L8rrmuf2.jpg",
+    category: "Smartphone",
+    features: ["6.74 90Hz Display", "Unisoc Tiger T612", "50MP Camera"]
   },
   {
     id: "4",
-    name: "Samsung Galaxy S24 Ultra",
+    name: "Samsung Galaxy M04",
     brand: "Samsung",
-    price: 1299,
-    rating: 4.6,
-    reviewCount: 3421,
-    sales: "3K+ sold this month",
-    image: "https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=400",
+    price: 4999,
+    rating: 4.0,
+    reviewCount: 7543,
+    sales: "12K+ sold this month",
+    image: "https://cdn1.smartprix.com/rx-iW0vANpX1-w1200-h1200/W0vanpx1.jpg",
     category: "Smartphone",
-    features: ["S Pen included", "200MP camera", "AI features"]
+    features: ["6.5 HD+ Display", "MediaTek Helio P35", "13MP Camera"]
   },
   {
     id: "5",
-    name: "Sony WH-1000XM5",
-    brand: "Sony",
-    price: 399,
-    originalPrice: 449,
-    rating: 4.8,
-    reviewCount: 5672,
-    sales: "7K+ sold this month",
-    image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=400",
-    category: "Audio",
-    features: ["30hr battery", "Industry-leading ANC", "Touch controls"]
+    name: "Infinix Smart 8",
+    brand: "Infinix",
+    price: 4999,
+    originalPrice: 5499,
+    rating: 4.2,
+    reviewCount: 6892,
+    sales: "10K+ sold this month",
+    image: "https://cdn1.smartprix.com/rx-iEZGHQdks-w1200-h1200/EzghQdks.jpg",
+    category: "Smartphone",
+    features: ["6.6 HD+ Display", "Unisoc Tiger T606", "13MP Camera"]
   },
   {
     id: "6",
-    name: "iPad Air 5th Gen",
-    brand: "Apple",
-    price: 599,
-    rating: 4.7,
+    name: "Tecno Pop 8",
+    brand: "Tecno",
+    price: 4799,
+    rating: 3.9,
+    reviewCount: 5234,
+    sales: "8K+ sold this month",
+    image: "https://cdn1.smartprix.com/rx-i0OKmAI9P-w1200-h1200/0okmAI9p.jpg",
+    category: "Smartphone",
+    features: ["6.6 HD+ Display", "Unisoc Tiger T606", "12MP Camera"]
+  },
+  // Additional products for other categories
+  {
+    id: "7",
+    name: "boAt Airdopes 141",
+    brand: "boAt",
+    price: 1299,
+    originalPrice: 1999,
+    rating: 4.1,
+    reviewCount: 45672,
+    sales: "50K+ sold this month",
+    image: "https://cdn.boat-lifestyle.com/spree/images/attachments/original/data/spree/products/23948/product_img/1701241915_4be62b22-7a12-486a-8b9b-2a89dd4b2b31.jpg",
+    category: "Audio",
+    features: ["42H Playback", "Beast Mode", "IWP Technology"]
+  },
+  {
+    id: "8",
+    name: "HP 15s Laptop",
+    brand: "HP",
+    price: 35000,
+    originalPrice: 40000,
+    rating: 4.3,
     reviewCount: 2156,
-    sales: "4K+ sold this month",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
-    category: "Tablet",
-    features: ["M1 chip", "10.9-inch display", "Apple Pencil support"]
+    sales: "2K+ sold this month",
+    image: "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08143462.png",
+    category: "Laptop",
+    features: ["Intel Core i3", "8GB RAM", "256GB SSD"]
   }
 ];
 

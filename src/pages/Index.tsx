@@ -203,6 +203,12 @@ const Index = () => {
     return mockProducts.slice(0, 4);
   };
 
+  const handleViewDetails = (product: Product) => {
+    // You can customize this action - for now, it shows an alert
+    alert(`View details for: ${product.name}\nPrice: ₹${product.price}\nBrand: ${product.brand}`);
+    // Later you can replace this with navigation to a detailed product page
+  };
+
   return (
     <div className="min-h-screen bg-gradient-hero">
       <Header />
@@ -230,7 +236,7 @@ const Index = () => {
                     className="animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <ProductCard product={product} />
+                    <ProductCard product={product} onViewDetails={handleViewDetails} />
                   </div>
                 ))}
               </div>

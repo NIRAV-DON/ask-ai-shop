@@ -19,9 +19,10 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  onViewDetails?: (product: Product) => void;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, onViewDetails }: ProductCardProps) => {
   const discount = product.originalPrice 
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
@@ -34,6 +35,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
             src={product.image}
             alt={product.name}
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+            onError={(e) => {
+              e.currentTarget.src = "https://via.placeholder.com/400x400/6366f1/ffffff?text=" + encodeURIComponent(product.name);
+            }}
           />
           {discount > 0 && (
             <Badge className="absolute top-3 left-3 bg-destructive text-destructive-foreground">
@@ -79,10 +83,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-price">${product.price}</span>
+              <span className="text-2xl font-bold text-price">₹{product.price}</span>
               {product.originalPrice && (
                 <span className="text-sm text-muted-foreground line-through">
-                  ${product.originalPrice}
+                  ₹{product.originalPrice}
                 </span>
               )}
             </div>
@@ -99,7 +103,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
             </div>
           </div>
 
-          <Button className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 group">
+          <Button 
+            onClick={() => onViewDetails?.(product)}
+            className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+          >
             <ExternalLink className="h-4 w-4 mr-2" />
             View Details
           </Button>

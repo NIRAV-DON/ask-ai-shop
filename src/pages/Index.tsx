@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import SearchInterface from "@/components/SearchInterface";
 import ChatResponse from "@/components/ChatResponse";
 import ProductCard from "@/components/ProductCard";
+import AIAgent from "@/components/AIAgent";
 
 interface Message {
   id: string;
@@ -215,6 +216,9 @@ const Index = () => {
       
       <main className="container mx-auto px-4 py-8 space-y-8">
         <SearchInterface onSearch={handleSearch} isLoading={isLoading} />
+        
+        {/* AI Agent Section */}
+        <AIAgent />
         
         <div className="grid lg:grid-cols-2 gap-8">
           <div>

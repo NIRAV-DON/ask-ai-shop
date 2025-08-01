@@ -8,33 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* AI-Commerce Theme - Modern gradients and tech colors */
+    --background: 225 25% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 225 20% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 225 20% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary: AI Blue */
+    --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Deep Purple */
+    --secondary: 263 70% 50%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Subtle grays */
+    --muted: 225 15% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Bright cyan for highlights */
+    --accent: 189 85% 65%;
+    --accent-foreground: 225 25% 8%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 225 15% 25%;
+    --input: 225 15% 18%;
+    --ring: 217 91% 60%;
+
+    /* Commerce-specific colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --price: 142 76% 45%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(263 70% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(225 20% 12%), hsl(225 15% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(225 25% 8%) 0%, hsl(225 20% 12%) 50%, hsl(217 91% 20%) 100%);
+    
+    /* Shadows with glow */
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(225 25% 4% / 0.4);
+    --shadow-elevated: 0 16px 64px hsl(225 25% 4% / 0.6);
+
+    /* Animation easing */
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 

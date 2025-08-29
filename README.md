@@ -1,3 +1,7 @@
+this is readme file
+
+
+
 # Welcome to your Lovable project
 
 ## Project info
